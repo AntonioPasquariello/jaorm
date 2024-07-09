@@ -1,8 +1,6 @@
 package io.github.ulisse1996.jaorm.extension.cdi;
 
-import io.github.ulisse1996.jaorm.logger.JaormLoggerHandler;
-import io.github.ulisse1996.jaorm.spi.CacheService;
-import io.github.ulisse1996.jaorm.spi.GlobalEventListener;
+import io.github.ulisse1996.jaorm.annotation.Dao;
 import jakarta.enterprise.inject.Instance;
 import jakarta.enterprise.inject.spi.CDI;
 import jakarta.enterprise.inject.spi.CDIProvider;
@@ -22,12 +20,11 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
-import java.util.List;
 import java.util.ServiceConfigurationError;
 import java.util.ServiceLoader;
 
 @ExtendWith({WeldJunit5Extension.class, MockitoExtension.class})
-class JakartaBeanProviderTest {
+class JakartaDaoProviderTest {
 
     private final static boolean MULTIPLE_CDI; // Used for Intellij Multiple Module tests
 
@@ -47,47 +44,14 @@ class JakartaBeanProviderTest {
     }
 
     @WeldSetup
-    public WeldInitiator weld = WeldInitiator.of(GlobalListenerService.class,
-            CustomCacheInstance.class, SimpleCacheInstance.class);
+    public WeldInitiator weld = WeldInitiator.of(JakartaDaoProvider.class);
 
     @Test
-    void should_return_global_listener_instance(WeldContainer container) throws Throwable {
-        runInEnvironment(container, () ->
-                Assertions.assertInstanceOf(GlobalListenerService.class, new JakartaBeanProvider().getBean(GlobalEventListener.class)));
-    }
-
-    @Test
-    void should_return_all_caches(WeldContainer container) throws Throwable {
-        runInEnvironment(container, () -> {
-            List<CacheService> list = new JakartaBeanProvider().getBeans(CacheService.class);
-
-            Assertions.assertEquals(2, list.size());
-            Assertions.assertTrue(
-                    list.stream().anyMatch(el -> el instanceof CustomCacheInstance)
-            );
-            Assertions.assertTrue(
-                    list.stream().anyMatch(el -> el instanceof SimpleCacheInstance)
-            );
+    void shouldSelectCustomDao(WeldContainer weldContainer) throws Throwable {
+        runInEnvironment(weldContainer, () -> {
+            Instance<CustomDao> select = CDI.current().select(CustomDao.class);
+            Assertions.assertTrue(select.isResolvable());
         });
-    }
-
-    @Test
-    void should_not_find_opt_instance(WeldContainer container) throws Throwable {
-        runInEnvironment(container, () -> Assertions.assertFalse(
-                new JakartaBeanProvider().getOptBean(JaormLoggerHandler.class).isPresent()
-        ));
-    }
-
-    @Test
-    void should_find_opt_instance(WeldContainer container) throws Throwable {
-        runInEnvironment(container, () -> Assertions.assertTrue(
-                new JakartaBeanProvider().getOptBean(CacheService.class).isPresent()
-        ));
-    }
-
-    @Test
-    void should_return_true_for_active_bean_provider() {
-        Assertions.assertTrue(new JakartaBeanProvider().isActive());
     }
 
     @SuppressWarnings({"rawtypes", "unchecked"})
@@ -113,4 +77,7 @@ class JakartaBeanProviderTest {
             executable.execute();
         }
     }
+
+    @Dao
+    interface CustomDao {}
 }

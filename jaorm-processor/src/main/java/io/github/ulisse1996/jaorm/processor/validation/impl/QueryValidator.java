@@ -136,13 +136,9 @@ public class QueryValidator extends Validator {
     private void checkSpecs(String sql, ExecutableElement method) {
         if (isValidSelect(sql)) {
             checkReturnMethod(method);
-            return;
         } else if (sql.toUpperCase().startsWith("DELETE") || sql.toUpperCase().startsWith("UPDATE")) {
             assertVoid(method);
-            return;
         }
-
-        throw new ProcessorException(String.format("Operation not supported for sql %s in method %s", sql, method));
     }
 
     private boolean isValidSelect(String sql) {
