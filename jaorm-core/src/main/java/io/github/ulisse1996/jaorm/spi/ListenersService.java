@@ -40,20 +40,7 @@ public abstract class ListenersService {
     }
 
     public void fireEvent(Object entity, GlobalEventType eventType) {
-        Class<?> klass = entity.getClass();
-        klass = getRealClass(klass);
-        Class<?> finalKlass = klass;
-        if (getEventClasses().stream().anyMatch(el -> el.equals(finalKlass))) {
-            GlobalEventListener.getInstance().handleEvent(entity, eventType);
-        }
-    }
-
-    private Class<?> getRealClass(Class<?> klass) {
-        if (EntityDelegate.class.isAssignableFrom(klass)) {
-            return DelegatesService.getInstance().getEntityClass(klass);
-        }
-
-        return klass;
+        GlobalEventListener.getInstance().handleEvent(entity, eventType);
     }
 
     public abstract Set<Class<?>> getEventClasses();
