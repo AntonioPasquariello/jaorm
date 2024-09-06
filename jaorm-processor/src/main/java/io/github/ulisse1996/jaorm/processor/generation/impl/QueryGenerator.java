@@ -1,21 +1,10 @@
 package io.github.ulisse1996.jaorm.processor.generation.impl;
 
-import com.squareup.javapoet.AnnotationSpec;
-import com.squareup.javapoet.ClassName;
-import com.squareup.javapoet.CodeBlock;
-import com.squareup.javapoet.MethodSpec;
-import com.squareup.javapoet.ParameterSpec;
-import com.squareup.javapoet.ParameterizedTypeName;
-import com.squareup.javapoet.TypeName;
-import com.squareup.javapoet.TypeSpec;
+import com.squareup.javapoet.*;
 import io.github.ulisse1996.jaorm.Arguments;
 import io.github.ulisse1996.jaorm.BaseDao;
 import io.github.ulisse1996.jaorm.Sort;
-import io.github.ulisse1996.jaorm.annotation.Dao;
-import io.github.ulisse1996.jaorm.annotation.Id;
-import io.github.ulisse1996.jaorm.annotation.Projection;
-import io.github.ulisse1996.jaorm.annotation.Query;
-import io.github.ulisse1996.jaorm.annotation.Table;
+import io.github.ulisse1996.jaorm.annotation.*;
 import io.github.ulisse1996.jaorm.cache.Cacheable;
 import io.github.ulisse1996.jaorm.entity.Page;
 import io.github.ulisse1996.jaorm.entity.PageImpl;
@@ -36,23 +25,8 @@ import io.github.ulisse1996.jaorm.spi.provider.QueryProvider;
 
 import javax.annotation.processing.ProcessingEnvironment;
 import javax.annotation.processing.RoundEnvironment;
-import javax.lang.model.element.Element;
-import javax.lang.model.element.ExecutableElement;
-import javax.lang.model.element.Modifier;
-import javax.lang.model.element.TypeElement;
-import javax.lang.model.element.VariableElement;
-import java.util.AbstractMap;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
-import java.util.Optional;
-import java.util.Set;
+import javax.lang.model.element.*;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -352,7 +326,7 @@ public class QueryGenerator extends Generator {
         String sqlParam = collectionNames ? "$L" : "$S";
         if (isValidSelect(sql)) {
             return checkSelect(entities, sql, method, collectionNames, sqlParam);
-        } else if (sql.toUpperCase().startsWith("DELETE")) {
+        } else if (sql.trim().toUpperCase().startsWith("DELETE")) {
             return new AbstractMap.SimpleImmutableEntry<>(String.format("$T.getSimple().delete(%s, params)", sqlParam),
                     new Object[] {QueryRunner.class, collectionNames ? "sql" : sql});
         } else {
@@ -362,7 +336,7 @@ public class QueryGenerator extends Generator {
     }
 
     private boolean isValidSelect(String sql) {
-        return sql.toUpperCase().startsWith("SELECT") || sql.toUpperCase().startsWith("WITH");
+        return sql.trim().toUpperCase().startsWith("SELECT") || sql.trim().toUpperCase().startsWith("WITH");
     }
 
     private Map.Entry<String, Object[]> checkSelect(List<TypeElement> entities, String sql, ExecutableElement method,

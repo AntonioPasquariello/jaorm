@@ -14,18 +14,9 @@ import io.github.ulisse1996.jaorm.specialization.SingleKeyDao;
 import io.github.ulisse1996.jaorm.specialization.TripleKeyDao;
 
 import javax.annotation.processing.ProcessingEnvironment;
-import javax.lang.model.element.Element;
-import javax.lang.model.element.ExecutableElement;
-import javax.lang.model.element.Name;
-import javax.lang.model.element.TypeElement;
-import javax.lang.model.element.VariableElement;
+import javax.lang.model.element.*;
 import javax.lang.model.type.TypeKind;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Optional;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class QueryValidator extends Validator {
@@ -90,6 +81,7 @@ public class QueryValidator extends Validator {
         debugMessage("Check validation for Query " + executableElement.getSimpleName());
         Query query = executableElement.getAnnotation(Query.class);
         String sql = getSql(query);
+        debugMessage("Processing query: " + sql);
         for (QueryStrategy queryStrategy : QueryStrategy.values()) {
             if (queryStrategy.isValid(sql, query.noArgs())) {
                 int paramNumber = queryStrategy.getParamNumber(sql);
@@ -130,19 +122,20 @@ public class QueryValidator extends Validator {
 
     private String getSql(Query query) {
         String sql = query.sql();
-        return ProcessorUtils.getSqlOrSqlFromFile(sql, this.processingEnvironment);
+        sql = ProcessorUtils.getSqlOrSqlFromFile(sql, this.processingEnvironment);
+        return sql.trim();
     }
 
     private void checkSpecs(String sql, ExecutableElement method) {
         if (isValidSelect(sql)) {
             checkReturnMethod(method);
-        } else if (sql.toUpperCase().startsWith("DELETE") || sql.toUpperCase().startsWith("UPDATE")) {
+        } else if (sql.trim().toUpperCase().startsWith("DELETE") || sql.trim().toUpperCase().startsWith("UPDATE")) {
             assertVoid(method);
         }
     }
 
     private boolean isValidSelect(String sql) {
-        return sql.toUpperCase().startsWith("SELECT") || sql.toUpperCase().startsWith("WITH");
+        return sql.trim().toUpperCase().startsWith("SELECT") || sql.trim().toUpperCase().startsWith("WITH");
     }
 
     private void checkReturnMethod(ExecutableElement method) {
