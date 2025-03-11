@@ -6,6 +6,7 @@ import io.github.ulisse1996.jaorm.dsl.query.common.trait.WithSubQuerySupport;
 import io.github.ulisse1996.jaorm.dsl.query.enums.LikeType;
 import io.github.ulisse1996.jaorm.dsl.query.enums.Operation;
 import io.github.ulisse1996.jaorm.entity.SqlColumn;
+import io.github.ulisse1996.jaorm.entity.converter.ValueConverter;
 import io.github.ulisse1996.jaorm.entity.sql.SqlParameter;
 
 import java.util.ArrayList;
@@ -185,7 +186,11 @@ public abstract class AbstractWhereImpl<T, R> {
         }
         List<SqlParameter> parameters = new ArrayList<>();
         if (value != null) {
-            parameters.add(new SqlParameter(value));
+            if (column.getConverter().equals(ValueConverter.NONE_CONVERTER)) {
+                parameters.add(new SqlParameter(value));
+            } else {
+                parameters.add(new SqlParameter(column.getConverter().toSql(value)));
+            }
         } else if (iterable != null) {
             parameters.addAll(StreamSupport.stream(iterable.spliterator(), false).map(SqlParameter::new).collect(Collectors.toList()));
         } else if (subQuery != null) {

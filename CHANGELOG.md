@@ -1,4 +1,7 @@
 # CHANGELOG
+## 1.8.0a
+- BugFix: NoConverter for query
+- Feature: LobSpecific with substring Support
 
 ## 1.8.0
 - Feature: Cursor for read large relationships
