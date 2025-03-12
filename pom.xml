@@ -41,12 +41,12 @@
 
     <name>JAORM (Parent)</name>
     <description>JAORM is a lightweight modular compile-time based Java ORM</description>
-    <url>https://github.com/ulisse1996/jaorm</url>
+    <url>https://github.com/antoniopasquariello/jaorm</url>
     <inceptionYear>2021</inceptionYear>
 
     <organization>
         <name>JAORM</name>
-        <url>https://github.com/ulisse1996/jaorm</url>
+        <url>https://github.com/antoniopasquariello/jaorm</url>
     </organization>
 
     <licenses>
@@ -79,27 +79,11 @@
     </developers>
 
     <scm>
-        <url>https://github.com/ulisse1996/jaorm</url>
-        <connection>scm:git:https://github.com/ulisse1996/jaorm.git</connection>
-        <developerConnection>scm:git:git@github.com:ulisse1996/jaorm.git</developerConnection>
+        <url>https://github.com/antoniopasquariello/jaorm</url>
+        <connection>scm:git:https://github.com/antoniopasquariello/jaorm.git</connection>
+        <developerConnection>scm:git:git@github.com:antoniopasquariello/jaorm.git</developerConnection>
         <tag>jaorm</tag>
     </scm>
-
-    <issueManagement>
-        <system>Github</system>
-        <url>https://github.com/ulisse1996/jaorm/issues</url>
-    </issueManagement>
-
-    <distributionManagement>
-        <snapshotRepository>
-            <id>ossrh</id>
-            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
-        <repository>
-            <id>ossrh</id>
-            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-        </repository>
-    </distributionManagement>
 
     <dependencies>
         <dependency>
@@ -174,9 +158,20 @@
 
     <profiles>
         <profile>
-            <id>oss</id>
+            <id>release</id>
             <build>
                 <plugins>
+				     <plugin>
+					  <groupId>org.sonatype.central</groupId>
+					  <artifactId>central-publishing-maven-plugin</artifactId>
+					  <version>0.4.0</version>
+					  <extensions>true</extensions>
+					  <configuration>
+					   <publishingServerId>central</publishingServerId>
+					   <tokenAuth>true</tokenAuth>
+					   <autoPublish>true</autoPublish>
+					  </configuration>
+					 </plugin>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-source-plugin</artifactId>
