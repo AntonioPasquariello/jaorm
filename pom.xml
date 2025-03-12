@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>io.github.ulisse1996</groupId>
+    <groupId>io.github.antoniopasquariello</groupId>
     <artifactId>jaorm-pom</artifactId>
     <packaging>pom</packaging>
     <version>1.8.0a</version>
@@ -65,6 +65,15 @@
             <url>https://github.com/ulisse1996</url>
             <roles>
                 <role>Author</role>
+            </roles>
+        </developer>
+        <developer>
+            <name>Antonio Pasquariello</name>
+            <email>a.pasquariello@gmail.com</email>
+            <timezone>+1</timezone>
+            <url>https://github.com/antoniopasquariello</url>
+            <roles>
+                <role>Contributor</role>
             </roles>
         </developer>
     </developers>

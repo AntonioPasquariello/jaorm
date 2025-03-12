@@ -51,7 +51,7 @@ compile configuration for maven
     <configuration>
         <annotationProcessorPaths>
             <path>
-                <groupId>io.github.ulisse1996</groupId>
+                <groupId>io.github.antoniopasquariello</groupId>
                 <artifactId>jaorm-processor</artifactId>
                 <version>${jaorm.version}</version>
             </path>
@@ -66,7 +66,7 @@ compile configuration for maven
             <configuration>
                 <annotationProcessorPaths>
                     <path>
-                        <groupId>io.github.ulisse1996</groupId>
+                        <groupId>io.github.antoniopasquariello</groupId>
                         <artifactId>jaorm-processor</artifactId>
                         <version>${jaorm.version}</version>
                     </path>

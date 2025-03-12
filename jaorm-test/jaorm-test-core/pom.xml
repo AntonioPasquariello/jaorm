@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>jaorm-test</artifactId>
-        <groupId>io.github.ulisse1996</groupId>
+        <groupId>io.github.antoniopasquariello</groupId>
         <version>1.8.0a</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -26,27 +26,27 @@
 
     <dependencies>
         <dependency>
-            <groupId>io.github.ulisse1996</groupId>
+            <groupId>io.github.antoniopasquariello</groupId>
             <artifactId>jaorm</artifactId>
             <version>1.8.0a</version>
         </dependency>
         <dependency>
-            <groupId>io.github.ulisse1996</groupId>
+            <groupId>io.github.antoniopasquariello</groupId>
             <artifactId>jaorm-core</artifactId>
             <version>1.8.0a</version>
         </dependency>
         <dependency>
-            <groupId>io.github.ulisse1996</groupId>
+            <groupId>io.github.antoniopasquariello</groupId>
             <artifactId>jaorm-dsl</artifactId>
             <version>1.8.0a</version>
         </dependency>
         <dependency>
-            <groupId>io.github.ulisse1996</groupId>
+            <groupId>io.github.antoniopasquariello</groupId>
             <artifactId>jaorm-transaction</artifactId>
             <version>1.8.0a</version>
         </dependency>
         <dependency>
-            <groupId>io.github.ulisse1996</groupId>
+            <groupId>io.github.antoniopasquariello</groupId>
             <artifactId>jaorm-validation</artifactId>
             <version>1.8.0a</version>
         </dependency>
@@ -110,7 +110,7 @@
                     </compilerArgs>
                     <annotationProcessorPaths>
                         <path>
-                            <groupId>io.github.ulisse1996</groupId>
+                            <groupId>io.github.antoniopasquariello</groupId>
                             <artifactId>jaorm-processor</artifactId>
                             <version>${jaorm.version}</version>
                         </path>
@@ -128,7 +128,7 @@
                             </compilerArgs>
                             <annotationProcessorPaths>
                                 <path>
-                                    <groupId>io.github.ulisse1996</groupId>
+                                    <groupId>io.github.antoniopasquariello</groupId>
                                     <artifactId>jaorm-processor</artifactId>
                                     <version>${jaorm.version}</version>
                                 </path>
