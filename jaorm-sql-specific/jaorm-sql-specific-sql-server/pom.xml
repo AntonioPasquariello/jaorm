@@ -5,7 +5,7 @@
     <parent>
         <artifactId>jaorm-sql-specific</artifactId>
         <groupId>io.github.antoniopasquariello</groupId>
-        <version>1.8.0a</version>
+        <version>36.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -13,8 +13,8 @@
     <name>JAORM (Sql Specific Sql Server)</name>
 
     <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
         <sonar.coverage.jacoco.xmlReportPaths>${project.basedir}/../../${aggregate.report.dir}</sonar.coverage.jacoco.xmlReportPaths>
     </properties>
 
@@ -22,7 +22,7 @@
         <dependency>
             <groupId>io.github.antoniopasquariello</groupId>
             <artifactId>jaorm-core</artifactId>
-            <version>1.8.0a</version>
+            <version>36.0.0</version>
         </dependency>
     </dependencies>
 

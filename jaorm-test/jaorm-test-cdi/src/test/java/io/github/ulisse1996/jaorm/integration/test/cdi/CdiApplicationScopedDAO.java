@@ -4,7 +4,7 @@ import io.github.ulisse1996.jaorm.BaseDao;
 import io.github.ulisse1996.jaorm.annotation.Dao;
 import io.github.ulisse1996.jaorm.annotation.Query;
 
-import javax.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.context.ApplicationScoped;
 
 @Dao
 @ApplicationScoped

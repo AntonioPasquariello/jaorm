@@ -2,9 +2,9 @@ package io.github.ulisse1996.jaorm.integration.test.cdi.inject;
 
 import io.github.ulisse1996.jaorm.BaseDao;
 
-import javax.enterprise.inject.Instance;
-import javax.enterprise.inject.Produces;
-import javax.inject.Inject;
+import jakarta.enterprise.inject.Instance;
+import jakarta.enterprise.inject.Produces;
+import jakarta.inject.Inject;
 
 public class DaoProducer {
 

@@ -1,6 +1,6 @@
 package io.github.ulisse1996.jaorm.integration.test.cdi.inject;
 
-import javax.enterprise.util.AnnotationLiteral;
+import jakarta.enterprise.util.AnnotationLiteral;
 
 public class MyIdentifierLiteral extends AnnotationLiteral<MyIdentifier> implements MyIdentifier {
 

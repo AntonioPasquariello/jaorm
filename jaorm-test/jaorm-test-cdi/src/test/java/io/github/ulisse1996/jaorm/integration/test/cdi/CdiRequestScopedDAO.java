@@ -3,7 +3,7 @@ package io.github.ulisse1996.jaorm.integration.test.cdi;
 import io.github.ulisse1996.jaorm.BaseDao;
 import io.github.ulisse1996.jaorm.annotation.Dao;
 
-import javax.enterprise.context.RequestScoped;
+import jakarta.enterprise.context.RequestScoped;
 
 @Dao
 @RequestScoped

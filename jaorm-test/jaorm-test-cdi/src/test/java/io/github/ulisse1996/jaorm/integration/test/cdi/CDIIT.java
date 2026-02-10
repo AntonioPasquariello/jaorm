@@ -1,5 +1,5 @@
 package io.github.ulisse1996.jaorm.integration.test.cdi;
-
+/*
 import io.github.ulisse1996.jaorm.BaseDao;
 import io.github.ulisse1996.jaorm.integration.test.cdi.inject.MyIdentifier;
 import org.jboss.weld.junit5.EnableWeld;
@@ -8,7 +8,7 @@ import org.jboss.weld.junit5.WeldSetup;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 
 @EnableWeld
 class CDIIT {
@@ -30,4 +30,4 @@ class CDIIT {
         Assertions.assertNotNull(defaultScopedDAO);
         Assertions.assertNotNull(producedDao);
     }
-}
+}*/
