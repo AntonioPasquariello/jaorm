@@ -25,42 +25,42 @@
         <dependency>
             <groupId>io.github.antoniopasquariello</groupId>
             <artifactId>jaorm</artifactId>
-            <version>36.0.0</version>
+            <version>${jaorm.version}</version>
         </dependency>
         <dependency>
             <groupId>io.github.antoniopasquariello</groupId>
             <artifactId>jaorm-core</artifactId>
-            <version>36.0.0</version>
+            <version>${jaorm.version}</version>
         </dependency>
         <dependency>
             <groupId>io.github.antoniopasquariello</groupId>
             <artifactId>jaorm-dsl</artifactId>
-            <version>36.0.0</version>
+            <version>${jaorm.version}</version>
         </dependency>
         <dependency>
             <groupId>io.github.antoniopasquariello</groupId>
             <artifactId>jaorm-cache</artifactId>
-            <version>36.0.0</version>
+            <version>${jaorm.version}</version>
         </dependency>
         <dependency>
             <groupId>io.github.antoniopasquariello</groupId>
             <artifactId>jaorm-transaction</artifactId>
-            <version>36.0.0</version>
+            <version>${jaorm.version}</version>
         </dependency>
         <dependency>
             <groupId>io.github.antoniopasquariello</groupId>
             <artifactId>jaorm-lombok</artifactId>
-            <version>36.0.0</version>
+            <version>${jaorm.version}</version>
         </dependency>
         <dependency>
             <groupId>io.github.antoniopasquariello</groupId>
             <artifactId>jaorm-validation</artifactId>
-            <version>36.0.0</version>
+            <version>${jaorm.version}</version>
         </dependency>
         <dependency>
             <groupId>io.github.antoniopasquariello</groupId>
             <artifactId>jaorm-processor</artifactId>
-            <version>36.0.0</version>
+            <version>${jaorm.version}</version>
         </dependency>
 
         <!-- Sql Specific -->
@@ -68,53 +68,53 @@
         <dependency>
             <groupId>io.github.antoniopasquariello</groupId>
             <artifactId>jaorm-sql-specific</artifactId>
-            <version>36.0.0</version>
+            <version>${jaorm.version}</version>
             <type>pom</type>
         </dependency>
         <dependency>
             <groupId>io.github.antoniopasquariello</groupId>
             <artifactId>jaorm-sql-specific-oracle</artifactId>
-            <version>36.0.0</version>
+            <version>${jaorm.version}</version>
         </dependency>
         <dependency>
             <groupId>io.github.antoniopasquariello</groupId>
             <artifactId>jaorm-sql-specific-postgre</artifactId>
-            <version>36.0.0</version>
+            <version>${jaorm.version}</version>
         </dependency>
         <dependency>
             <groupId>io.github.antoniopasquariello</groupId>
             <artifactId>jaorm-sql-specific-sql-server</artifactId>
-            <version>36.0.0</version>
+            <version>${jaorm.version}</version>
         </dependency>
         <dependency>
             <groupId>io.github.antoniopasquariello</groupId>
             <artifactId>jaorm-sql-specific-mysql</artifactId>
-            <version>36.0.0</version>
+            <version>${jaorm.version}</version>
         </dependency>
 
         <!-- Processor Extensions -->
         <dependency>
             <groupId>io.github.antoniopasquariello</groupId>
             <artifactId>jaorm-extensions</artifactId>
-            <version>36.0.0</version>
+            <version>${jaorm.version}</version>
             <type>pom</type>
         </dependency>
         <dependency>
             <groupId>io.github.antoniopasquariello</groupId>
             <artifactId>jaorm-extension-api</artifactId>
-            <version>36.0.0</version>
+            <version>${jaorm.version}</version>
         </dependency>
         <dependency>
             <groupId>io.github.antoniopasquariello</groupId>
             <artifactId>jaorm-ansi-sql-extension</artifactId>
-            <version>36.0.0</version>
+            <version>${jaorm.version}</version>
         </dependency>
 
         <!-- Tools -->
         <dependency>
             <groupId>io.github.antoniopasquariello</groupId>
             <artifactId>jaorm-tools-core</artifactId>
-            <version>36.0.0</version>
+            <version>${jaorm.version}</version>
         </dependency>
     </dependencies>
 
@@ -123,42 +123,42 @@
             <dependency>
                 <groupId>io.github.antoniopasquariello</groupId>
                 <artifactId>jaorm</artifactId>
-                <version>36.0.0</version>
+                <version>${jaorm.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.github.antoniopasquariello</groupId>
                 <artifactId>jaorm-core</artifactId>
-                <version>36.0.0</version>
+                <version>${jaorm.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.github.antoniopasquariello</groupId>
                 <artifactId>jaorm-dsl</artifactId>
-                <version>36.0.0</version>
+                <version>${jaorm.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.github.antoniopasquariello</groupId>
                 <artifactId>jaorm-cache</artifactId>
-                <version>36.0.0</version>
+                <version>${jaorm.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.github.antoniopasquariello</groupId>
                 <artifactId>jaorm-transaction</artifactId>
-                <version>36.0.0</version>
+                <version>${jaorm.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.github.antoniopasquariello</groupId>
                 <artifactId>jaorm-lombok</artifactId>
-                <version>36.0.0</version>
+                <version>${jaorm.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.github.antoniopasquariello</groupId>
                 <artifactId>jaorm-validation</artifactId>
-                <version>36.0.0</version>
+                <version>${jaorm.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.github.antoniopasquariello</groupId>
                 <artifactId>jaorm-processor</artifactId>
-                <version>36.0.0</version>
+                <version>${jaorm.version}</version>
             </dependency>
 
             <!-- Sql Specific -->
@@ -166,23 +166,23 @@
             <dependency>
                 <groupId>io.github.antoniopasquariello</groupId>
                 <artifactId>jaorm-sql-specific</artifactId>
-                <version>36.0.0</version>
+                <version>${jaorm.version}</version>
                 <type>pom</type>
             </dependency>
             <dependency>
                 <groupId>io.github.antoniopasquariello</groupId>
                 <artifactId>jaorm-sql-specific-oracle</artifactId>
-                <version>36.0.0</version>
+                <version>${jaorm.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.github.antoniopasquariello</groupId>
                 <artifactId>jaorm-sql-specific-postgre</artifactId>
-                <version>36.0.0</version>
+                <version>${jaorm.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.github.antoniopasquariello</groupId>
                 <artifactId>jaorm-sql-specific-sql-server</artifactId>
-                <version>36.0.0</version>
+                <version>${jaorm.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.github.antoniopasquariello</groupId>
@@ -194,25 +194,25 @@
             <dependency>
                 <groupId>io.github.antoniopasquariello</groupId>
                 <artifactId>jaorm-extensions</artifactId>
-                <version>36.0.0</version>
+                <version>${jaorm.version}</version>
                 <type>pom</type>
             </dependency>
             <dependency>
                 <groupId>io.github.antoniopasquariello</groupId>
                 <artifactId>jaorm-extension-api</artifactId>
-                <version>36.0.0</version>
+                <version>${jaorm.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.github.antoniopasquariello</groupId>
                 <artifactId>jaorm-ansi-sql-extension</artifactId>
-                <version>36.0.0</version>
+                <version>${jaorm.version}</version>
             </dependency>
 
             <!-- Tools -->
             <dependency>
                 <groupId>io.github.antoniopasquariello</groupId>
                 <artifactId>jaorm-tools-core</artifactId>
-                <version>36.0.0</version>
+                <version>${jaorm.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
