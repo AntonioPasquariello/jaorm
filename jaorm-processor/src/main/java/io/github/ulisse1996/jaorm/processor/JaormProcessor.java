@@ -26,7 +26,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 @SupportedAnnotationTypes("io.github.ulisse1996.jaorm.annotation.*")
-@SupportedSourceVersion(SourceVersion.RELEASE_8)
+@SupportedSourceVersion(SourceVersion.RELEASE_21)
 @SupportedOptions("jaorm.tables.suffix")
 public class JaormProcessor extends AbstractProcessor {
 

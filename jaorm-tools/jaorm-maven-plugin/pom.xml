@@ -5,7 +5,7 @@
     <parent>
         <artifactId>jaorm-tools</artifactId>
         <groupId>io.github.antoniopasquariello</groupId>
-        <version>1.8.0a</version>
+        <version>36.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -14,8 +14,8 @@
     <packaging>maven-plugin</packaging>
 
     <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
         <sonar.skip>true</sonar.skip>
         <sonar.coverage.jacoco.xmlReportPaths>${project.basedir}/../../${aggregate.report.dir}</sonar.coverage.jacoco.xmlReportPaths>
     </properties>
@@ -24,7 +24,7 @@
         <dependency>
             <groupId>io.github.antoniopasquariello</groupId>
             <artifactId>jaorm-tools-core</artifactId>
-            <version>1.8.0a</version>
+            <version>36.0.0</version>
         </dependency>
         <dependency>
             <groupId>org.apache.maven</groupId>
@@ -50,7 +50,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-plugin-plugin</artifactId>
-                <version>3.6.1</version>
+                <version>3.13.0</version>
                 <configuration>
                     <skipErrorNoDescriptorsFound>true</skipErrorNoDescriptorsFound>
                 </configuration>

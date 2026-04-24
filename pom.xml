@@ -7,7 +7,7 @@
     <groupId>io.github.antoniopasquariello</groupId>
     <artifactId>jaorm-pom</artifactId>
     <packaging>pom</packaging>
-    <version>1.8.0a</version>
+    <version>36.0.0</version>
     <modules>
         <module>jaorm-processor</module>
         <module>jaorm-core</module>
@@ -25,8 +25,8 @@
     </modules>
 
     <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <junit.version>5.8.2</junit.version>
         <mockito.version>4.6.1</mockito.version>
@@ -34,7 +34,7 @@
         <sonar.moduleKey>${project.groupId}:${project.artifactId}</sonar.moduleKey>
         <sonar.organization>ulisse1996</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-        <jacoco-maven-plugin.version>0.8.6</jacoco-maven-plugin.version>
+        <jacoco-maven-plugin.version>0.8.14</jacoco-maven-plugin.version>
         <sonar.coverage.jacoco.xmlReportPaths>jaorm-bom/target/site/jacoco-aggregate/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
         <aggregate.report.dir>jaorm-bom/target/site/jacoco-aggregate/jacoco.xml</aggregate.report.dir>
     </properties>
@@ -227,9 +227,9 @@
             <id>jdk11</id>
             <dependencies>
                 <dependency>
-                    <groupId>javax.xml.bind</groupId>
-                    <artifactId>jaxb-api</artifactId>
-                    <version>2.3.1</version>
+                    <groupId>jakarta.xml.bind</groupId>
+                    <artifactId>jakarta.xml.bind-api</artifactId>
+                    <version>3.0.1</version>
                 </dependency>
             </dependencies>
         </profile>

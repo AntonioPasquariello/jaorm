@@ -5,7 +5,7 @@
     <parent>
         <artifactId>jaorm-test</artifactId>
         <groupId>io.github.antoniopasquariello</groupId>
-        <version>1.8.0a</version>
+        <version>36.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -13,10 +13,10 @@
     <name>Jaorm (IT CDI)</name>
 
     <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
         <weld-junit5.version>2.0.2.Final</weld-junit5.version>
-        <jaorm.version>1.8.0a</jaorm.version>
+        <jaorm.version>36.0.0</jaorm.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.deploy.skip>true</maven.deploy.skip>
         <sonar.skip>true</sonar.skip>
@@ -26,12 +26,12 @@
         <dependency>
             <groupId>io.github.antoniopasquariello</groupId>
             <artifactId>jaorm-core</artifactId>
-            <version>1.8.0a</version>
+            <version>36.0.0</version>
         </dependency>
         <dependency>
             <groupId>io.github.antoniopasquariello</groupId>
             <artifactId>jaorm-test-core</artifactId>
-            <version>${jaorm.version}</version>
+            <version>36.0.0</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -44,6 +44,12 @@
                     <artifactId>junit-jupiter-api</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.platform</groupId>
+            <artifactId>jakarta.jakartaee-web-api</artifactId>
+            <version>11.0.0</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 

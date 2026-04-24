@@ -5,7 +5,7 @@
     <parent>
         <artifactId>jaorm-pom</artifactId>
         <groupId>io.github.antoniopasquariello</groupId>
-        <version>1.8.0a</version>
+        <version>36.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -13,8 +13,8 @@
     <name>JAORM (Processor)</name>
 
     <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
         <javapoet.version>1.13.0</javapoet.version>
         <compile-testing.version>0.19</compile-testing.version>
         <sonar.coverage.jacoco.xmlReportPaths>${project.basedir}/../${aggregate.report.dir}</sonar.coverage.jacoco.xmlReportPaths>
@@ -24,22 +24,22 @@
         <dependency>
             <groupId>io.github.antoniopasquariello</groupId>
             <artifactId>jaorm-core</artifactId>
-            <version>1.8.0a</version>
+            <version>36.0.0</version>
         </dependency>
         <dependency>
             <groupId>io.github.antoniopasquariello</groupId>
             <artifactId>jaorm-lombok</artifactId>
-            <version>1.8.0a</version>
+            <version>36.0.0</version>
         </dependency>
         <dependency>
             <groupId>io.github.antoniopasquariello</groupId>
             <artifactId>jaorm-extension-api</artifactId>
-            <version>1.8.0a</version>
+            <version>36.0.0</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.20</version>
+            <version>1.18.32</version>
         </dependency>
         <dependency>
             <groupId>com.squareup</groupId>
@@ -50,6 +50,12 @@
             <groupId>com.google.testing.compile</groupId>
                 <artifactId>compile-testing</artifactId>
             <version>${compile-testing.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.platform</groupId>
+            <artifactId>jakarta.jakartaee-api</artifactId>
+            <version>11.0.0</version>
             <scope>test</scope>
         </dependency>
     </dependencies>

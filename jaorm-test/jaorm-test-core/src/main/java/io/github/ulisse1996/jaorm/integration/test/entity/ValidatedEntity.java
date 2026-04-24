@@ -4,8 +4,8 @@ import io.github.ulisse1996.jaorm.annotation.Column;
 import io.github.ulisse1996.jaorm.annotation.Id;
 import io.github.ulisse1996.jaorm.annotation.Table;
 
-import javax.validation.constraints.Future;
-import javax.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Future;
+import jakarta.validation.constraints.NotEmpty;
 import java.math.BigDecimal;
 import java.util.Date;
 
