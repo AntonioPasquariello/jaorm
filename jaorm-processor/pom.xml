@@ -5,7 +5,7 @@
     <parent>
         <artifactId>jaorm-pom</artifactId>
         <groupId>io.github.antoniopasquariello</groupId>
-        <version>36.0.0</version>
+        <version>36.0.1</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -24,17 +24,17 @@
         <dependency>
             <groupId>io.github.antoniopasquariello</groupId>
             <artifactId>jaorm-core</artifactId>
-            <version>36.0.0</version>
+            <version>36.0.1</version>
         </dependency>
         <dependency>
             <groupId>io.github.antoniopasquariello</groupId>
             <artifactId>jaorm-lombok</artifactId>
-            <version>36.0.0</version>
+            <version>36.0.1</version>
         </dependency>
         <dependency>
             <groupId>io.github.antoniopasquariello</groupId>
             <artifactId>jaorm-extension-api</artifactId>
-            <version>36.0.0</version>
+            <version>36.0.1</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>

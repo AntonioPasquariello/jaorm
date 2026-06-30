@@ -5,7 +5,7 @@
     <parent>
         <artifactId>jaorm-tools</artifactId>
         <groupId>io.github.antoniopasquariello</groupId>
-        <version>36.0.0</version>
+        <version>36.0.1</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -22,12 +22,12 @@
         <dependency>
             <groupId>io.github.antoniopasquariello</groupId>
             <artifactId>jaorm-core</artifactId>
-            <version>36.0.0</version>
+            <version>36.0.1</version>
         </dependency>
         <dependency>
             <groupId>io.github.antoniopasquariello</groupId>
             <artifactId>jaorm-processor</artifactId>
-            <version>36.0.0</version>
+            <version>36.0.1</version>
         </dependency>
         <dependency>
             <groupId>com.github.javaparser</groupId>

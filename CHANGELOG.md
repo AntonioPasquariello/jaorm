@@ -1,4 +1,6 @@
 # CHANGELOG
+## 36.0.1
+- Bugfix: LobSpecific
 ## 36.0.0
 - Feature: Switch to Java 21
 ## 1.8.0a
