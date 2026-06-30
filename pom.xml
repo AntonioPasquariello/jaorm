@@ -7,7 +7,7 @@
     <groupId>io.github.antoniopasquariello</groupId>
     <artifactId>jaorm-pom</artifactId>
     <packaging>pom</packaging>
-    <version>1.8.0a</version>
+    <version>1.8.0b</version>
     <modules>
         <module>jaorm-processor</module>
         <module>jaorm-core</module>

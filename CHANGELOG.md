@@ -1,4 +1,7 @@
 # CHANGELOG
+## 1.8.0b
+- BugFix: LobSpecific
+
 ## 1.8.0a
 - BugFix: NoConverter for query
 - Feature: LobSpecific with substring Support
