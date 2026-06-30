@@ -1,4 +1,4 @@
-package io.github.ulisse1996.jaorm.vendor.oracle.functions;
+package io.github.ulisse1996.jaorm.vendor.oracle;
 
 import io.github.ulisse1996.jaorm.vendor.specific.LobSpecific;
 
