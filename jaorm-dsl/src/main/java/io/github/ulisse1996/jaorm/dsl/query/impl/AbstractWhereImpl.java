@@ -186,7 +186,7 @@ public abstract class AbstractWhereImpl<T, R> {
         }
         List<SqlParameter> parameters = new ArrayList<>();
         if (value != null) {
-            if (column.getConverter().equals(ValueConverter.NONE_CONVERTER)) {
+            if (column==null || column.getConverter().equals(ValueConverter.NONE_CONVERTER)) {
                 parameters.add(new SqlParameter(value));
             } else {
                 parameters.add(new SqlParameter(column.getConverter().toSql(value)));
